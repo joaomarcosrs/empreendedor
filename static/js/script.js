@@ -1,5 +1,5 @@
 
 function VisualizarRegistros() { 
-    window.location.href = "http://localhost:8000/empreendedor/registros";
+    window.location.href = "https://sala-do-empreendedor.herokuapp.com/empreendedor/registros";
 }
 
