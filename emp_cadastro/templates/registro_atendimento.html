@@ -1,0 +1,167 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empreendedor</title>
+    {% bootstrap_css %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container_top" id="id_container_top">
+        <h1>Registro de Atendimento</h1>
+    </div>
+    <div class="container" id="id_container_form">
+        {% bootstrap_messages %}
+        <form action="{% url 'registro_atendimento' %}" method="POST" class="form" autocomplete="off" autocapitalize="on" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="sub_container">
+                <div class="sub_container_box">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_nome">Nome</label>
+                                <input type="text" name="nome" maxlength="120" class="form-control" placeholder="Nome" title="" required id="id_nome">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_nascimento">Data de Nascimento</label>
+                                <input type="text" name="nascimento" class="form-control" placeholder="Data de Nascimento" title="" required id="id_nascimento">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_cnpj">CNPJ</label>
+                                <input type="text" name="cnpj" maxlength="18" class="form-control" placeholder="CNPJ" title="" required id="id_cnpj">
+                            </div>
+                        </div>
+                        <div class="col">    
+                            <div class="form-group">
+                                <label for="id_cpf">CPF</label>
+                                <input type="text" name="cpf" maxlength="14" class="form-control" placeholder="CPF" title="" required id="id_cpf">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_email">Email</label>
+                        <input type="email" name="email" maxlength="100" class="form-control" placeholder="Email" title="" required id="id_email">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_telefone_principal">Telefone Principal</label>
+                                <input type="text" name="telefone_principal" maxlength="11" class="form-control" placeholder="Telefone Principal" title="" required id="id_telefone_principal">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_telefone_alternativo">Telefone Alternativo</label>
+                                <input type="text" name="telefone_alternativo" maxlength="11" class="form-control" placeholder="Telefone Alternativo" title="" id="id_telefone_alternativo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Serviços</label>
+                        <div class="radio radio-success" id="id_descricao">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_0">
+                                            <input class="form-check-input" id="id_descricao_0" name="descricao" title="" type="checkbox" value="ABERTURA MEI"/>FORMALIZAÇÃO
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_1">
+                                            <input class="form-check-input" id="id_descricao_1" name="descricao" title="" type="checkbox" value="ALTERAÇÃO CADASTRAL"/>ALTERAÇÃO CADASTRAL
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_2">
+                                            <input class="form-check-input" id="id_descricao_2" name="descricao" title="" type="checkbox" value="INFORMAÇÕES"/>INFORMAÇÕES
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_3">
+                                            <input class="form-check-input" id="id_descricao_3" name="descricao" title="" type="checkbox" value="EMISSÃO DAS"/>EMISSÃO DAS
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_4">
+                                            <input class="form-check-input" id="id_descricao_4" name="descricao" title="" type="checkbox" value="PARCELAMENTO"/>PARCELAMENTO
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_5">
+                                            <input class="form-check-input" id="id_descricao_5" name="descricao" title="" type="checkbox" value="EMISSÃO DE PARCELA"/>EMISSÃO DE PARCELA
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">    
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_6">
+                                            <input class="form-check-input" id="id_descricao_6" name="descricao" title="" type="checkbox" value="CÓDIGO DE ACESSO"/>CÓDIGO DE ACESSO
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">    
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_7">
+                                            <input class="form-check-input" id="id_descricao_7" name="descricao" title="" type="checkbox" value="REGULARIZE"/>REGULARIZE
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">     
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_8">
+                                            <input class="form-check-input" id="id_descricao_8" name="descricao" title="" type="checkbox" value="BAIXA MEI"/>BAIXA MEI
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="id_descricao_9">
+                                            <input class="form-check-input" id="id_descricao_9" name="descricao" title="" type="checkbox" value="REGISTRO BAIXADO"/>REGISTRO BAIXADO
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_buttons" id="id_container_buttons">
+                        {% buttons %}
+                        <button type="submit" class="btn btn-primary">Registrar</button>                 
+                        {% endbuttons %}
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button id="Button_reg" type="submit" class="btn btn-secondary" onclick="VisualizarRegistros()">Visualizar Registros</button>
+    </div>
+    {% bootstrap_javascript jquery='full' %}
+    <script type='text/javascript' src='{% static "js/script.js" %}'></script>
+</body>
+</html>

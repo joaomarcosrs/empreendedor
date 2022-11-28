@@ -1,0 +1,57 @@
+.container_top#id_container_top {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 35%;
+
+
+}
+
+.container#id_container_form {
+    position: relative;
+    left: 0%;
+    top: 100px;
+    background-color: rgba(123, 198, 201, 0.747);
+    
+}
+
+
+.sub_container_box {
+    margin-top: 20px;
+    width: auto;
+}
+
+input#id_cnpj {
+    left: 0px;
+    width: 400px;
+    
+}
+
+input#id_cpf {
+    right: 0px;
+    width: 400px;
+
+}
+
+input#id_nome {
+    width: 500px;
+}
+
+input#id_nascimento {
+    width: 200px;
+}
+
+input#id_email {
+    width: 500px;
+}
+
+input#id_telefone_principal {
+    width: 400px
+}
+
+input#id_telefone_alternativo {
+    width: 400px
+}
+
+div#id_container_buttons {
+    margin-bottom: 30px;
+}
