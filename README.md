@@ -18,3 +18,5 @@ Pontos que devem ser melhorados:
 
 A página inicial será de autenticação de usuário, para acessar a aplicação.
 A página https://sala-do-empreendedor.herokuapp.com/empreendedor/ será a tela que o usuário logado verá e contará com acesso ao Registro de atendimento, bem como modificação do seu perfil e etc.
+
+Na página de https://sala-do-empreendedor.herokuapp.com/empreendedor/registros, um  modal será implementado para quando clicar no CNPJ, apareçam informações detalhadas de cada atendimento, também será criada uma caixa de pesquisa para filtrar os atendimentos por informações específicas.
