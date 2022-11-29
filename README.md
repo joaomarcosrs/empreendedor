@@ -12,7 +12,7 @@ e
 
 https://sala-do-empreendedor.herokuapp.com/empreendedor/registros
 
-onde, são visuaalizados os registros de atendimento.
+onde, são visualizados os registros de atendimento.
 
 Pontos que devem ser melhorados:
 
