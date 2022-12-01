@@ -13,6 +13,7 @@ e
 https://sala-do-empreendedor.herokuapp.com/empreendedor/registros
 
 onde, são visualizados os registros de atendimento.
+
 Pontos melhorados:
 
 1. Na página de https://sala-do-empreendedor.herokuapp.com/empreendedor/registros, um  modal foi implementado para quando clicar no CNPJ, apareçam informações detalhadas de cada atendimento.
