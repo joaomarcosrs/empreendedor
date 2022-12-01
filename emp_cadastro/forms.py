@@ -13,6 +13,7 @@ class RegistroAtendimentoForm(forms.ModelForm):
             'telefone_principal',
             'telefone_alternativo',
             'descricao',
+            'tipo',
         ]
         widgets = {'descricao': forms.CheckboxSelectMultiple(),}
         

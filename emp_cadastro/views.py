@@ -4,6 +4,11 @@ from .models import RegistroAtendimento
 
 from .forms import RegistroAtendimentoForm
 
+def usuarios_atendimento(reuqest):
+    usuario_logado = reuqest.user
+
+    return str(usuario_logado)
+
 def registro_atendimento(request):
     if str(request.method) == 'POST':
         form = RegistroAtendimentoForm(request.POST)

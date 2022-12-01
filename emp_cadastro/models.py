@@ -27,7 +27,23 @@ descricao_atendimento = (
     (CANCELADO, 'REGISTRO BAIXADO'),
 )
 
-class RegistroAtendimento(models.Model):
+ONLINE = 'ON-LINE'
+PRESENCIAL = 'PRESENCIAL'
+
+tipo = (
+    (ONLINE, 'ON-LINE'),
+    (PRESENCIAL, 'PRESENCIAL'),
+)
+    
+
+class Base(models.Model):
+    criado = models.DateField('Data de Criação: ', auto_now_add=True)
+
+    class Meta:
+        abstract = True
+
+
+class RegistroAtendimento(Base):
 
     nome = models.CharField(max_length=120)
     cnpj = CNPJField()
@@ -37,7 +53,9 @@ class RegistroAtendimento(models.Model):
     telefone_principal = models.CharField(max_length=11)
     telefone_alternativo = models.CharField(max_length=11, blank=True)
     descricao = MultiSelectField(choices=descricao_atendimento, max_length=100, max_choices=4)
-   
+    tipo = models.CharField(choices=tipo, max_length=30, blank=False, null=False) 
+
+    
     def __str__(self):
         return self.nome
     

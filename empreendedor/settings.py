@@ -85,18 +85,6 @@ DATABASES = {
 	'default': dj_database_url.config()
 }
 
-""" 
-DATABASES = {
-    'default': {
-        'ENGINE': str(os.getenv('ENGINE')),
-        'NAME': str(os.getenv('NAME')),
-        'USER': str(os.getenv('USER')),
-        'PASSWORD': str(os.getenv('PASSWORD')),
-        'HOST': str(os.getenv('HOST')),
-        'PORT': str(os.getenv('PORT')),
-    }
-}
- """
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

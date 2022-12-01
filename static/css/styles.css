@@ -1,15 +1,15 @@
 .container_top#id_container_top {
     position: relative;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 35%;
 
 
 }
 
 .container#id_container_form {
-    position: relative;
+    position: static;
     left: 0%;
-    top: 100px;
+    top: 50px;
     background-color: rgba(123, 198, 201, 0.747);
     
 }

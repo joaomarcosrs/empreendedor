@@ -18,6 +18,7 @@
         {% bootstrap_messages %}
         <form action="{% url 'registro_atendimento' %}" method="POST" class="form" autocomplete="off" autocapitalize="on" enctype="multipart/form-data">
             {% csrf_token %}
+            <br>
             <div class="sub_container">
                 <div class="sub_container_box">
                     <div class="row">
@@ -149,6 +150,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <br><br>
+                            <div>
+                                <label for="tipo">Tipo de Atendimento</label>
+                                <select name="tipo" id="id_tipo">
+                                    <option value="ON-LINE">ON-LINE</option>
+                                    <option value="PRESENCIAL">PRESENCIAL</option>
+                                </select>
+                            </div>
+                            <br>
                         </div>
                     </div>
                     <div class="container_buttons" id="id_container_buttons">
@@ -160,6 +170,7 @@
             </div>
         </form>
         <button id="Button_reg" type="submit" class="btn btn-secondary" onclick="VisualizarRegistros()">Visualizar Registros</button>
+        <br>
     </div>
     {% bootstrap_javascript jquery='full' %}
     <script type='text/javascript' src='{% static "js/script.js" %}'></script>
