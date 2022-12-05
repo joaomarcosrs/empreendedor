@@ -31,7 +31,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="id_nascimento">Data de Nascimento</label>
-                                <input type="text" name="nascimento" class="form-control" placeholder="Data de Nascimento" title="" required id="id_nascimento">
+                                <input type="date" name="nascimento" class="form-control" placeholder="Data de Nascimento" title="" required id="id_nascimento">
                             </div>
                         </div>
                     </div>
@@ -49,10 +49,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="id_email">Email</label>
-                        <input type="email" name="email" maxlength="100" class="form-control" placeholder="Email" title="" required id="id_email">
-                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="id_email">Email</label>
+                                <input type="email" name="email" maxlength="100" class="form-control" placeholder="Email" title="" required id="id_email">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="tipo">Tipo de Atendimento</label>
+                            <br>
+                            <select name="tipo" id="id_tipo">
+                                <option selected>----------------</option>
+                                <option value="ON-LINE">ON-LINE</option>
+                                <option value="PRESENCIAL">PRESENCIAL</option>
+                            </select>
+                        </div>
+                    </div>    
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
@@ -150,14 +163,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <br><br>
-                            <div>
-                                <label for="tipo">Tipo de Atendimento</label>
-                                <select name="tipo" id="id_tipo">
-                                    <option value="ON-LINE">ON-LINE</option>
-                                    <option value="PRESENCIAL">PRESENCIAL</option>
-                                </select>
-                            </div>
                             <br>
                         </div>
                     </div>
@@ -169,9 +174,16 @@
                 </div>
             </div>
         </form>
-        <button id="Button_reg" type="submit" class="btn btn-secondary" onclick="VisualizarRegistros()">Visualizar Registros</button>
-        <br>
+        <div id="id_div_button_reg">
+            <button id="Button_reg" type="submit" class="btn btn-secondary" onclick="VisualizarRegistros()">Visualizar Registros</button>
+        </div>
     </div>
+    {{ myurl|json_script:"url_" }}
+    <script id="url_" type="application/json">
+        window.location.origin;
+    </script>
+
+
     {% bootstrap_javascript jquery='full' %}
     <script type='text/javascript' src='{% static "js/script.js" %}'></script>
 </body>
