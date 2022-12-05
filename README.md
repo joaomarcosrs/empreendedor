@@ -2,7 +2,7 @@
 
 O link do projeto é https://sala-do-empreendedor.herokuapp.com/
 
-Alguns templates apenas são visulizados caso o login seja feito. Para rodar teste basta usar as credenciais
+Alguns templates apenas são visualizados caso o login seja feito. Para rodar teste basta usar as credenciais
 
 Login: joaomarcos
 
