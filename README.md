@@ -5,8 +5,8 @@ O link do projeto é https://sala-do-empreendedor.herokuapp.com/
 Alguns templates apenas são visulizados caso o login seja feito. Para rodar teste basta usar as credenciais
 
 Login: joaomarcos
-Senha: admin
 
+Senha: admin
 
 Atualmente, estão ativas para CRUD e teste apenas as urls:
 
