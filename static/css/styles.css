@@ -27,9 +27,19 @@ h1 {
 .container#id_container_form {
     position: relative;
     padding: 30px;
+    margin-top: 30px;
     background-color: rgba(203, 217, 218, 0.747);
-    
 }
+
+.container {
+  position: relative;
+  margin-top: 30px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
 
 .sub_container_box {
     margin-top: 10px;
@@ -90,3 +100,7 @@ h1 {
   .card#id_card_class {
     min-width: 420px;
   }
+
+.hidden {
+  display: none;
+}

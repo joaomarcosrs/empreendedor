@@ -1,19 +1,11 @@
+{% extends 'home.html' %}
+
+{% block title %}Atendimento{% endblock %}
 {% load bootstrap4 %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empreendedor</title>
-    {% bootstrap_css %}
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-</head>
-<body>
-    <div class="container_top" id="id_container_top">
-        <h1>Registro de Atendimento</h1>
-    </div>
+{% block user %}{{ usuario_logado }}{% endblock %}
+
+{% block content %}
     <div class="container" id="id_container_form">
         {% bootstrap_messages %}
         <form action="{% url 'registro_atendimento' %}" method="POST" class="form" autocomplete="off" autocapitalize="on" enctype="multipart/form-data">
@@ -178,13 +170,4 @@
             <button id="Button_reg" type="submit" class="btn btn-secondary" onclick="VisualizarRegistros()">Visualizar Registros</button>
         </div>
     </div>
-    {{ myurl|json_script:"url_" }}
-    <script id="url_" type="application/json">
-        window.location.origin;
-    </script>
-
-
-    {% bootstrap_javascript jquery='full' %}
-    <script type='text/javascript' src='{% static "js/script.js" %}'></script>
-</body>
-</html>
+{% endblock %}

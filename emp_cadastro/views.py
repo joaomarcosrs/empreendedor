@@ -31,3 +31,5 @@ def registros(request):
     }
     return render(request, 'registros.html', context)
 
+
+

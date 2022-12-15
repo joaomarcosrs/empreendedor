@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django_cpf_cnpj',
     'multiselectfield',
     'bootstrap4',
-
 ]
 
 MIDDLEWARE = [
@@ -70,10 +69,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'usuario_auth.views.userlabel',
+                
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'empreendedor.wsgi.application'
 
@@ -84,6 +86,18 @@ WSGI_APPLICATION = 'empreendedor.wsgi.application'
 DATABASES = {
 	'default': dj_database_url.config()
 }
+
+""" DATABASES = {
+    'default': {
+        'ENGINE': str(os.getenv('ENGINE')),
+        'NAME': str(os.getenv('NAME')),
+        'USER': str(os.getenv('USER')),
+        'PASSWORD': str(os.getenv('PASSWORD')),
+        'HOST': str(os.getenv('HOST')),
+        'PORT': str(os.getenv('PORT'))    
+    }
+} """
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

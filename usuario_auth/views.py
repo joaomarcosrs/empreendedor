@@ -27,9 +27,12 @@ def login_user(request):
 
 def home(request):
     if request.user.is_authenticated:
-        context = {
-            'usuario_logado': request.user
-        }
-        return render (request, 'home.html', context)
+        return render (request, 'home.html')
     else:
         return redirect('login')
+
+def userlabel(request):
+    context = {
+        'usuario_logado': request.user
+    }
+    return context
