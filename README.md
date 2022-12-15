@@ -30,11 +30,13 @@ Pontos melhorados:
 
 4. Redirecionamento da url usando json, para chamar a função no javascript.
 
+5. Foi criado um filtro em JS para selecionar os registros de acordo com o que é digitado no campo do input.
+
+6. O html foi estendido para todas as outras telas.
+
 
 Pontos que devem ser melhorados:
 
 HTML deve ser melhorado com a estilização do CSS.
-
-Também será criada uma caixa de pesquisa para filtrar os atendimentos por informações específicas.
 
 Quando criada a tela de autenticação o ideal será que as informações como usuário, data e horário sejam armazenadas no banco de dados em todos os atendimentos.
