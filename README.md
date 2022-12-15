@@ -10,19 +10,19 @@ Senha: admin
 
 Atualmente, estão ativas para CRUD e teste apenas as urls:
 
-https://sala-do-empreendedor.herokuapp.com/empreendedor/registro_atendimento
+https://sala-do-empreendedor.herokuapp.com/home/registro_atendimento
 
 onde, é feito um registro de atendimento, com validação de CPF e CNPJ.
 
 e
 
-https://sala-do-empreendedor.herokuapp.com/empreendedor/registros
+https://sala-do-empreendedor.herokuapp.com/home/registros
 
 onde, são visualizados os registros de atendimento.
 
 Pontos melhorados:
 
-1. Na página de https://sala-do-empreendedor.herokuapp.com/empreendedor/registros, um  modal foi implementado para quando clicar no CNPJ, apareçam informações detalhadas de cada atendimento.
+1. Na página de https://sala-do-empreendedor.herokuapp.com/home/registros, um  modal foi implementado para quando clicar no CNPJ, apareçam informações detalhadas de cada atendimento.
 
 2. Foi criado a tela de autenticação de login do usuário é a tela inicial para acessar a aplicação.
 
